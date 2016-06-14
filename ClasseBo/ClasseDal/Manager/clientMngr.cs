@@ -11,9 +11,6 @@ namespace ClasseDal.Manager
     public class clientMngr
     {
 
-        // Avant Repo
-
-        #region BRepo
         private clientDAO moncliPro = new clientDAO();
         private Client Lclient;
 
@@ -64,10 +61,5 @@ namespace ClasseDal.Manager
         }
 
         #endregion
-        #endregion
-
-        // Repository
-
-
     }
 }
