@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B94AEE98-417E-46B2-B22D-FE13F2772E4D}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{1EDE6A97-E080-4A45-9C5D-27A13575AF5F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClasseBo</RootNamespace>
-    <AssemblyName>ClasseBo</AssemblyName>
+    <RootNamespace>CreationBase</RootNamespace>
+    <AssemblyName>CreationBase</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,18 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CentreInformatique.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Contrat.cs" />
-    <Compile Include="Exceptions\CentreInformatiqueException.cs" />
-    <Compile Include="Exceptions\ClientException.cs" />
-    <Compile Include="Exceptions\ContratException.cs" />
-    <Compile Include="Exceptions\TpException.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasseDal\ClasseDal.csproj">
+      <Project>{DDD48984-D086-432A-90D5-FE0220F6C38A}</Project>
+      <Name>ClasseDal</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B94AEE98-417E-46B2-B22D-FE13F2772E4D}</ProjectGuid>
+    <ProjectGuid>{DDD48984-D086-432A-90D5-FE0220F6C38A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClasseBo</RootNamespace>
-    <AssemblyName>ClasseBo</AssemblyName>
+    <RootNamespace>ClasseDal</RootNamespace>
+    <AssemblyName>ClasseDal</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,19 +49,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CentreInformatique.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Contrat.cs" />
-    <Compile Include="Exceptions\CentreInformatiqueException.cs" />
-    <Compile Include="Exceptions\ClientException.cs" />
-    <Compile Include="Exceptions\ContratException.cs" />
-    <Compile Include="Exceptions\TpException.cs" />
+    <Compile Include="Configuration\CentreInformatiqueConfiguration.cs" />
+    <Compile Include="Configuration\ClientConfiguration.cs" />
+    <Compile Include="Configuration\ContratConfiguration.cs" />
+    <Compile Include="Dao\centreInformatiqueDAO.cs" />
+    <Compile Include="Dao\clientDAO.cs" />
+    <Compile Include="Dao\contratDAO.cs" />
+    <Compile Include="Exceptions\DaoException.cs" />
+    <Compile Include="Exceptions\DaoExceptionAfficheMessage.cs" />
+    <Compile Include="Exceptions\DaoExceptionFinAppli.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Manager\clientMngr.cs" />
+    <Compile Include="TpContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TpInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasseBo\ClasseBo.csproj">
+      <Project>{b94aee98-417e-46b2-b22d-fe13f2772e4d}</Project>
+      <Name>ClasseBo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
