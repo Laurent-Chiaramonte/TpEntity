@@ -60,6 +60,7 @@
     <Compile Include="Exceptions\DaoExceptionFinAppli.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Manager\clientMngr.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="TpContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TpInitializer.cs" />

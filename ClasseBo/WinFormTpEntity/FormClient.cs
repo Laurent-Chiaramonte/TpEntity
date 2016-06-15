@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasseDal.Manager;
 
 namespace WinFormTpEntity
 {
@@ -19,8 +20,8 @@ namespace WinFormTpEntity
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //ICollection<Client> icollcli = ClasseDal.Manager.clientMngr.getAllCli();
-            //lstcli.DataSource = icollcli;
+            //ICollection<Client> listcli = clientMngr.getAllCli();
+            //lstcli.DataSource = listcli;
         }
     }
 }
