@@ -58,12 +58,12 @@
     <Compile Include="Exceptions\DaoException.cs" />
     <Compile Include="Exceptions\DaoExceptionAfficheMessage.cs" />
     <Compile Include="Exceptions\DaoExceptionFinAppli.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Manager\clientMngr.cs" />
-    <Compile Include="Repository.cs" />
-    <Compile Include="TpContext.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Configuration\TpContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TpInitializer.cs" />
+    <Compile Include="Configuration\TpInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

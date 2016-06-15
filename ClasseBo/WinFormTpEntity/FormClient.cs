@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClasseDal.Manager;
+using ClasseDal;
 
 namespace WinFormTpEntity
 {
     public partial class FormClient : Form
     {
+        private IRepository<Client> _clientRepository;
+    
         public FormClient()
         {
             InitializeComponent();
@@ -20,8 +23,18 @@ namespace WinFormTpEntity
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //ICollection<Client> listcli = clientMngr.getAllCli();
-            //lstcli.DataSource = listcli;
+            DisplayAllClients();
         }
+
+        private void FormClient_Load(object sender, EventArgs e)
+        {
+            this._clientRepository = new Repository<Client>();
+        }
+        
+        public void DisplayAllClients()
+        {
+            clientBindingSource.DataSource = _clientRepository.GetAll();
+        }
+
     }
 }

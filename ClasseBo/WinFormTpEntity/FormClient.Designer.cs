@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lstcli = new System.Windows.Forms.ListBox();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,11 +58,17 @@
             // 
             // lstcli
             // 
+            this.lstcli.DataSource = this.clientBindingSource;
+            this.lstcli.DisplayMember = "nom_client";
             this.lstcli.FormattingEnabled = true;
             this.lstcli.Location = new System.Drawing.Point(11, 90);
             this.lstcli.Name = "lstcli";
             this.lstcli.Size = new System.Drawing.Size(261, 95);
             this.lstcli.TabIndex = 2;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataSource = typeof(Client);
             // 
             // FormClient
             // 
@@ -71,6 +80,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FormClient";
             this.Text = "Clients";
+            this.Load += new System.EventHandler(this.FormClient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,6 +92,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox lstcli;
+        private System.Windows.Forms.BindingSource clientBindingSource;
     }
 }
 
