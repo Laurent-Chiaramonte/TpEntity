@@ -8,58 +8,61 @@ using System.Threading.Tasks;
 
 namespace ClasseDal.Manager
 {
-    //public class clientMngr
-    //{
+    public class clientMngr
+    {
 
-    //    private clientDAO moncliPro = new clientDAO();
-    //    private Client Lclient;
+        private IRepository<Client> _clientRepository;
 
-    //    #region Constructeurs
+        #region Constructeurs
 
-    //    public clientMngr() { }
+        public clientMngr() { }
 
-    //    #endregion
+        #endregion
 
-    //    #region Méthodes
+        #region Méthodes
 
-    //    public ICollection<Client> getAllCli()
-    //    {
-    //        return moncliPro.GetAllClient();
-    //    }
+        internal IEnumerable<Client> getAllCli()
+        {
+            //clientDAO cliDAO = new clientDAO();
+            //IEnumerable<Client> cli = cliDAO.GetAll();
+            //return cli;
+            this._clientRepository = new Repository<Client>();
+            return _clientRepository.GetAll();
+        }
 
-    //    public Client monCli(int id)
-    //    {
-    //        try
-    //        {
-    //            Lclient = moncliPro.GetClientByID(id);
+        //public Client monCli(int id)
+        //{
+        //    try
+        //    {
+        //        Lclient = moncliPro.GetClientByID(id);
 
-    //            if (Lclient == null)
-    //            {
-    //                throw new ClientException("Le client n'existe pas");
-    //            }
-    //            else
-    //            {
-    //                return Lclient;
-    //            }
-    //        }
-    //        catch (ClientException mess)
-    //        {
-    //            throw new ClientException("Client non trouvé", mess);
-    //        }
-    //    }
+        //        if (Lclient == null)
+        //        {
+        //            throw new ClientException("Le client n'existe pas");
+        //        }
+        //        else
+        //        {
+        //            return Lclient;
+        //        }
+        //    }
+        //    catch (ClientException mess)
+        //    {
+        //        throw new ClientException("Client non trouvé", mess);
+        //    }
+        //}
 
-    //    public Client createCli(string nomcli, string adressecli, string cpcli, string villecli, string telcli)
-    //    {
-    //        Client cli = new Client();
-    //        cli.nom_client = nomcli;
-    //        cli.adresse_client = adressecli;
-    //        cli.cp_client = cpcli;
-    //        cli.ville_client = villecli;
-    //        cli.tel_client = telcli;
+        //public Client createCli(string nomcli, string adressecli, string cpcli, string villecli, string telcli)
+        //{
+        //    Client cli = new Client();
+        //    cli.nom_client = nomcli;
+        //    cli.adresse_client = adressecli;
+        //    cli.cp_client = cpcli;
+        //    cli.ville_client = villecli;
+        //    cli.tel_client = telcli;
 
-    //        return cli;
-    //    }
+        //    return cli;
+        //}
 
-    //    #endregion
-    //}
+        #endregion
+    }
 }
