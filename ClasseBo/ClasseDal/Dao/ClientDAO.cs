@@ -4,36 +4,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClasseBo.Exceptions;
+using ClasseDal.Exceptions;
 
 namespace ClasseDal.Dao
 {
-    internal class clientDAO
-    {
-        public clientDAO() { }
+    //internal class clientDAO : IRepository<Client>
+    //{
+    //    public clientDAO() { }
 
-        internal ICollection<Client> GetAllClient()
-        {
-            using (TpContext tpx = new TpContext())
-            {
-                return tpx.Clients.ToArray();
-            }
-        }
+    //    public object Insert(Client cl)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
 
-        internal Client GetClientByID(int idcli)
-        {
-            using (TpContext tpx = new TpContext())
-            {
-                try
-                {
-                    var cli = tpx.Clients.Find(idcli);
-                    return cli;
-                }
-                catch (ClientException ex)
-                {
-                    throw new ClientException(ex.Message);
-                }
-            }
-        }
+    //    public void Delete(Client id)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
 
-    }
+    //    public void Update(Client cl)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+
+    //    public ICollection<Client> GetAll()
+    //    {
+    //        using (TpContext tpx = new TpContext())
+    //        {
+    //            try
+    //            {
+    //                var query = tpx.Clients.ToList();
+    //                return query;
+    //            }
+    //            catch (Exception ex)
+    //            {
+    //                throw new DaoExceptionAfficheMessage(ex.Message);
+    //            }                
+    //        }
+    //    }
+
+    //    internal Client GetSingleByID(int idcli)
+    //    {
+    //        using (TpContext tpx = new TpContext())
+    //        {
+    //            try
+    //            {
+    //                var cli = tpx.Clients.Find(idcli);
+    //                return cli;
+    //            }
+    //            catch (ClientException ex)
+    //            {
+    //                throw new ClientException(ex.Message);
+    //            }
+    //        }
+    //    }
+
+    //}
 }
