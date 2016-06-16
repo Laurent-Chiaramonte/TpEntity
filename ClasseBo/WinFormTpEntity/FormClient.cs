@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClasseDal;
 using ClasseDal.Manager;
-using ClasseDal.Dao;
+using ClasseDal.Exceptions;
 
 namespace WinFormTpEntity
 {
     public partial class FormClient : Form
     {
         private clientMngr Mngr;
-    
+
+        Client cl = new Client();
+
         public FormClient()
         {
             InitializeComponent();
@@ -39,7 +41,6 @@ namespace WinFormTpEntity
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            Client cl = new Client();
             cl.nom_client = txtnom.Text;
             cl.adresse_client = txtadr.Text;
             cl.cp_client = txtcp.Text;
@@ -56,6 +57,32 @@ namespace WinFormTpEntity
                 Application.Exit();
             }
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index))
+            {
+                cl = (dataGridView1.Rows[e.RowIndex]).DataBoundItem as Client;
+
+                DialogResult dr = MessageBox.Show("Le client va être supprimé", "DEL",
+                   MessageBoxButtons.YesNo,
+                   MessageBoxIcon.Question,
+                   MessageBoxDefaultButton.Button1);
+
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Mngr.SuppClient(cl);
+                    }
+                    catch (DaoExceptionFinAppli defa)
+                    {
+                        MessageBox.Show(defa.Message);
+                        Application.Exit();
+                    }
+                }
+            }
         }
     }
 }

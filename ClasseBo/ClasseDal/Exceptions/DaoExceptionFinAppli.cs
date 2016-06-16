@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasseDal.Exceptions
 {
-    class DaoExceptionFinAppli : Exception
+    public class DaoExceptionFinAppli : Exception
     {
         public DaoExceptionFinAppli() : base()
         {
