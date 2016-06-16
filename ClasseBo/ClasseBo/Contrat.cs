@@ -11,7 +11,6 @@ using System.Text;
 
 public class Contrat
 {
-    private DateTime ech;
 
     #region Propriétés
     public virtual int num_contrat

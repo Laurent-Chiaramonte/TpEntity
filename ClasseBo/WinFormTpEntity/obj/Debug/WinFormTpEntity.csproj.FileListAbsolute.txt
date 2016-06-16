@@ -1,0 +1,34 @@
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.csprojResolveAssemblyReference.cache
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.FormClient.resources
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.Properties.Resources.resources
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.csproj.GenerateResource.Cache
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\WinFormTpEntity.exe.config
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\WinFormTpEntity.exe
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\WinFormTpEntity.pdb
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseBo.dll
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseDal.dll
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.dll
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.SqlServer.dll
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseBo.pdb
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseDal.pdb
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.xml
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.SqlServer.xml
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.exe
+E:\NewGitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\WinFormTpEntity.exe.config
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.exe
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\WinFormTpEntity.exe
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\WinFormTpEntity.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseBo.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseDal.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseBo.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\ClasseDal.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.xml
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.csprojResolveAssemblyReference.cache
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.FormClient.resources
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.Properties.Resources.resources
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\WinFormTpEntity\obj\Debug\WinFormTpEntity.csproj.GenerateResource.Cache

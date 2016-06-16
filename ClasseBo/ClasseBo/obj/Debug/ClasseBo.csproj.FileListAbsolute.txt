@@ -1,0 +1,18 @@
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\ClasseBo.dll.config
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\ClasseBo.dll
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\ClasseBo.pdb
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.dll
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.SqlServer.dll
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.xml
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.SqlServer.xml
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.dll
+E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\ClasseBo.dll.config
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\ClasseBo.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\ClasseBo.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.xml
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.pdb

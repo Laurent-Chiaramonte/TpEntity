@@ -9,7 +9,6 @@ namespace ClasseBll
 {
     public class ClientManager
     {
-        private IRepository<Client> _clientRepository;
 
         public ClientManager() { }
 

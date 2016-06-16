@@ -1,0 +1,28 @@
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\CreationBase.exe.config
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\CreationBase.exe
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\CreationBase.pdb
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseDal.dll
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.dll
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.SqlServer.dll
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseBo.dll
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseDal.pdb
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.xml
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.SqlServer.xml
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseBo.pdb
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\obj\Debug\CreationBase.csprojResolveAssemblyReference.cache
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\obj\Debug\CreationBase.exe
+E:\NewGitHub\TpEntity\ClasseBo\CreationBase\obj\Debug\CreationBase.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\CreationBase.exe.config
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\CreationBase.exe
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\CreationBase.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseDal.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseBo.dll
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseDal.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.xml
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\bin\Debug\ClasseBo.pdb
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\obj\Debug\CreationBase.csprojResolveAssemblyReference.cache
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\obj\Debug\CreationBase.exe
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\CreationBase\obj\Debug\CreationBase.pdb
