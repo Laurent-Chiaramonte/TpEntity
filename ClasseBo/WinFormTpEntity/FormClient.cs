@@ -15,7 +15,7 @@ namespace WinFormTpEntity
 {
     public partial class FormClient : Form
     {
-        private IRepository<Client> _clientRepository;
+        private clientMngr Mngr;
     
         public FormClient()
         {
@@ -29,12 +29,12 @@ namespace WinFormTpEntity
 
         private void FormClient_Load(object sender, EventArgs e)
         {
-            this._clientRepository = new Repository<Client>();
+            this.Mngr = new clientMngr();
         }
         
         public void DisplayAllClients()
         {
-            clientBindingSource.DataSource = _clientRepository.GetAll();
+            clientBindingSource.DataSource = Mngr.getAllCli();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -46,8 +46,16 @@ namespace WinFormTpEntity
             cl.ville_client = txtville.Text;
             cl.tel_client = txttel.Text;
 
-            _clientRepository.Insert(cl);
-            _clientRepository.Save();
+            try
+            {
+                Mngr.AjoutClient(cl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erreur !");
+                Application.Exit();
+            }
+            
         }
     }
 }

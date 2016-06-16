@@ -21,47 +21,40 @@ namespace ClasseDal.Manager
 
         #region Méthodes
 
-        internal IEnumerable<Client> getAllCli()
+        public IEnumerable<Client> getAllCli()
         {
-            //clientDAO cliDAO = new clientDAO();
-            //IEnumerable<Client> cli = cliDAO.GetAll();
-            //return cli;
             this._clientRepository = new Repository<Client>();
             return _clientRepository.GetAll();
         }
 
-        //public Client monCli(int id)
-        //{
-        //    try
-        //    {
-        //        Lclient = moncliPro.GetClientByID(id);
+        public Client GetClientById(int id)
+        {
+            this._clientRepository = new Repository<Client>();
+            return _clientRepository.GetSingleById(id);
+        }
 
-        //        if (Lclient == null)
-        //        {
-        //            throw new ClientException("Le client n'existe pas");
-        //        }
-        //        else
-        //        {
-        //            return Lclient;
-        //        }
-        //    }
-        //    catch (ClientException mess)
-        //    {
-        //        throw new ClientException("Client non trouvé", mess);
-        //    }
-        //}
 
-        //public Client createCli(string nomcli, string adressecli, string cpcli, string villecli, string telcli)
-        //{
-        //    Client cli = new Client();
-        //    cli.nom_client = nomcli;
-        //    cli.adresse_client = adressecli;
-        //    cli.cp_client = cpcli;
-        //    cli.ville_client = villecli;
-        //    cli.tel_client = telcli;
+        public void AjoutClient(Client cl)
+        {
+            this._clientRepository = new Repository<Client>();
+            _clientRepository.Insert(cl);
+            _clientRepository.Save();
+        }
 
-        //    return cli;
-        //}
+        public void SuppClient(Client cl)
+        {
+            this._clientRepository = new Repository<Client>();
+            _clientRepository.Delete(cl);
+            _clientRepository.Save();
+        }
+
+        public void UpdatClient(Client cl)
+        {
+            this._clientRepository = new Repository<Client>();
+            _clientRepository.Update(cl);
+            _clientRepository.Save();
+        }
+
 
         #endregion
     }
