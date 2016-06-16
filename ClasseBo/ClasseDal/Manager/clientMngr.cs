@@ -33,11 +33,19 @@ namespace ClasseDal.Manager
         }
 
 
-        public void AjoutClient(Client cl)
+        public bool AjoutClient(Client cl)
         {
-            this._clientRepository = new Repository<Client>();
-            _clientRepository.Insert(cl);
-            _clientRepository.Save();
+            try
+            {
+                this._clientRepository = new Repository<Client>();
+                _clientRepository.Insert(cl);
+                _clientRepository.Save();
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
         }
 
         public void SuppClient(Client cl)

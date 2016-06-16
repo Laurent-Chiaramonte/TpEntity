@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.villeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btndgvsupp = new System.Windows.Forms.DataGridViewButtonColumn();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.txtnom = new System.Windows.Forms.TextBox();
@@ -51,10 +44,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnadd = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbcreer = new System.Windows.Forms.GroupBox();
+            this.numclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.villeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btndgvsupp = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Modifier = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btncreer = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbcreer.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +82,8 @@
             this.cpclientDataGridViewTextBoxColumn,
             this.villeclientDataGridViewTextBoxColumn,
             this.telclientDataGridViewTextBoxColumn,
-            this.btndgvsupp});
+            this.btndgvsupp,
+            this.Modifier});
             this.dataGridView1.DataSource = this.clientBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 42);
             this.dataGridView1.Name = "dataGridView1";
@@ -87,56 +91,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(931, 150);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // numclientDataGridViewTextBoxColumn
-            // 
-            this.numclientDataGridViewTextBoxColumn.DataPropertyName = "num_client";
-            this.numclientDataGridViewTextBoxColumn.HeaderText = "num_client";
-            this.numclientDataGridViewTextBoxColumn.Name = "numclientDataGridViewTextBoxColumn";
-            this.numclientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomclientDataGridViewTextBoxColumn
-            // 
-            this.nomclientDataGridViewTextBoxColumn.DataPropertyName = "nom_client";
-            this.nomclientDataGridViewTextBoxColumn.HeaderText = "nom_client";
-            this.nomclientDataGridViewTextBoxColumn.Name = "nomclientDataGridViewTextBoxColumn";
-            this.nomclientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresseclientDataGridViewTextBoxColumn
-            // 
-            this.adresseclientDataGridViewTextBoxColumn.DataPropertyName = "adresse_client";
-            this.adresseclientDataGridViewTextBoxColumn.HeaderText = "adresse_client";
-            this.adresseclientDataGridViewTextBoxColumn.Name = "adresseclientDataGridViewTextBoxColumn";
-            this.adresseclientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpclientDataGridViewTextBoxColumn
-            // 
-            this.cpclientDataGridViewTextBoxColumn.DataPropertyName = "cp_client";
-            this.cpclientDataGridViewTextBoxColumn.HeaderText = "cp_client";
-            this.cpclientDataGridViewTextBoxColumn.Name = "cpclientDataGridViewTextBoxColumn";
-            this.cpclientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // villeclientDataGridViewTextBoxColumn
-            // 
-            this.villeclientDataGridViewTextBoxColumn.DataPropertyName = "ville_client";
-            this.villeclientDataGridViewTextBoxColumn.HeaderText = "ville_client";
-            this.villeclientDataGridViewTextBoxColumn.Name = "villeclientDataGridViewTextBoxColumn";
-            this.villeclientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telclientDataGridViewTextBoxColumn
-            // 
-            this.telclientDataGridViewTextBoxColumn.DataPropertyName = "tel_client";
-            this.telclientDataGridViewTextBoxColumn.HeaderText = "tel_client";
-            this.telclientDataGridViewTextBoxColumn.Name = "telclientDataGridViewTextBoxColumn";
-            this.telclientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // btndgvsupp
-            // 
-            this.btndgvsupp.HeaderText = "";
-            this.btndgvsupp.Name = "btndgvsupp";
-            this.btndgvsupp.ReadOnly = true;
-            this.btndgvsupp.Text = "Supprimer";
-            this.btndgvsupp.UseColumnTextForButtonValue = true;
             // 
             // clientBindingSource
             // 
@@ -147,7 +101,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button1.Location = new System.Drawing.Point(107, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 13);
+            this.button1.Size = new System.Drawing.Size(20, 13);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -242,31 +196,113 @@
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
-            // groupBox1
+            // gbcreer
             // 
-            this.groupBox1.Controls.Add(this.txttel);
-            this.groupBox1.Controls.Add(this.btnadd);
-            this.groupBox1.Controls.Add(this.txtnom);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtadr);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtcp);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtville);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(107, 198);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 174);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
+            this.gbcreer.Controls.Add(this.txttel);
+            this.gbcreer.Controls.Add(this.btnadd);
+            this.gbcreer.Controls.Add(this.txtnom);
+            this.gbcreer.Controls.Add(this.label6);
+            this.gbcreer.Controls.Add(this.txtadr);
+            this.gbcreer.Controls.Add(this.label5);
+            this.gbcreer.Controls.Add(this.txtcp);
+            this.gbcreer.Controls.Add(this.label4);
+            this.gbcreer.Controls.Add(this.txtville);
+            this.gbcreer.Controls.Add(this.label3);
+            this.gbcreer.Controls.Add(this.label2);
+            this.gbcreer.Location = new System.Drawing.Point(107, 198);
+            this.gbcreer.Name = "gbcreer";
+            this.gbcreer.Size = new System.Drawing.Size(340, 174);
+            this.gbcreer.TabIndex = 15;
+            this.gbcreer.TabStop = false;
+            this.gbcreer.Visible = false;
+            // 
+            // numclientDataGridViewTextBoxColumn
+            // 
+            this.numclientDataGridViewTextBoxColumn.DataPropertyName = "num_client";
+            this.numclientDataGridViewTextBoxColumn.HeaderText = "num_client";
+            this.numclientDataGridViewTextBoxColumn.Name = "numclientDataGridViewTextBoxColumn";
+            this.numclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomclientDataGridViewTextBoxColumn
+            // 
+            this.nomclientDataGridViewTextBoxColumn.DataPropertyName = "nom_client";
+            this.nomclientDataGridViewTextBoxColumn.HeaderText = "nom_client";
+            this.nomclientDataGridViewTextBoxColumn.Name = "nomclientDataGridViewTextBoxColumn";
+            this.nomclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresseclientDataGridViewTextBoxColumn
+            // 
+            this.adresseclientDataGridViewTextBoxColumn.DataPropertyName = "adresse_client";
+            this.adresseclientDataGridViewTextBoxColumn.HeaderText = "adresse_client";
+            this.adresseclientDataGridViewTextBoxColumn.Name = "adresseclientDataGridViewTextBoxColumn";
+            this.adresseclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cpclientDataGridViewTextBoxColumn
+            // 
+            this.cpclientDataGridViewTextBoxColumn.DataPropertyName = "cp_client";
+            this.cpclientDataGridViewTextBoxColumn.HeaderText = "cp_client";
+            this.cpclientDataGridViewTextBoxColumn.Name = "cpclientDataGridViewTextBoxColumn";
+            this.cpclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // villeclientDataGridViewTextBoxColumn
+            // 
+            this.villeclientDataGridViewTextBoxColumn.DataPropertyName = "ville_client";
+            this.villeclientDataGridViewTextBoxColumn.HeaderText = "ville_client";
+            this.villeclientDataGridViewTextBoxColumn.Name = "villeclientDataGridViewTextBoxColumn";
+            this.villeclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telclientDataGridViewTextBoxColumn
+            // 
+            this.telclientDataGridViewTextBoxColumn.DataPropertyName = "tel_client";
+            this.telclientDataGridViewTextBoxColumn.HeaderText = "tel_client";
+            this.telclientDataGridViewTextBoxColumn.Name = "telclientDataGridViewTextBoxColumn";
+            this.telclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // btndgvsupp
+            // 
+            this.btndgvsupp.HeaderText = "";
+            this.btndgvsupp.Name = "btndgvsupp";
+            this.btndgvsupp.ReadOnly = true;
+            this.btndgvsupp.Text = "Supprimer";
+            this.btndgvsupp.UseColumnTextForButtonValue = true;
+            // 
+            // Modifier
+            // 
+            this.Modifier.HeaderText = "";
+            this.Modifier.Name = "Modifier";
+            this.Modifier.ReadOnly = true;
+            this.Modifier.Text = "Modifier";
+            this.Modifier.UseColumnTextForButtonValue = true;
+            // 
+            // btncreer
+            // 
+            this.btncreer.Location = new System.Drawing.Point(12, 198);
+            this.btncreer.Name = "btncreer";
+            this.btncreer.Size = new System.Drawing.Size(75, 23);
+            this.btncreer.TabIndex = 16;
+            this.btncreer.Text = "Creer";
+            this.btncreer.UseVisualStyleBackColor = true;
+            this.btncreer.Click += new System.EventHandler(this.btncreer_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(460, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "MaintInfo";
             // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 438);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btncreer);
+            this.Controls.Add(this.gbcreer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -275,8 +311,8 @@
             this.Load += new System.EventHandler(this.FormClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbcreer.ResumeLayout(false);
+            this.gbcreer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +335,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.GroupBox gbcreer;
         private System.Windows.Forms.DataGridViewTextBoxColumn numclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresseclientDataGridViewTextBoxColumn;
@@ -306,7 +343,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn villeclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn btndgvsupp;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewButtonColumn Modifier;
+        private System.Windows.Forms.Button btncreer;
+        private System.Windows.Forms.Label label7;
     }
 }
 

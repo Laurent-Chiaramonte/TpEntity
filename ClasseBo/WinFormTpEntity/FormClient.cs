@@ -49,7 +49,12 @@ namespace WinFormTpEntity
 
             try
             {
-                Mngr.AjoutClient(cl);
+                if (Mngr.AjoutClient(cl))
+                {
+                    MessageBox.Show("Ajout ok !", cl.ToString());
+                    gbcreer.Visible = false;
+                    DisplayAllClients();
+                }
             }
             catch (Exception ex)
             {
@@ -75,6 +80,7 @@ namespace WinFormTpEntity
                     try
                     {
                         Mngr.SuppClient(cl);
+                        DisplayAllClients();
                     }
                     catch (DaoExceptionFinAppli defa)
                     {
@@ -83,6 +89,11 @@ namespace WinFormTpEntity
                     }
                 }
             }
+        }
+
+        private void btncreer_Click(object sender, EventArgs e)
+        {
+            gbcreer.Visible = true;
         }
     }
 }
