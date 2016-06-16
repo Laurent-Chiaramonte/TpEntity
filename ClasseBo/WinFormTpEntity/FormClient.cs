@@ -36,5 +36,17 @@ namespace WinFormTpEntity
             clientBindingSource.DataSource = _clientRepository.GetAll();
         }
 
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            Client cl = new Client();
+            cl.nom_client = txtnom.Text;
+            cl.adresse_client = txtadr.Text;
+            cl.cp_client = txtcp.Text;
+            cl.ville_client = txtville.Text;
+            cl.tel_client = txttel.Text;
+
+            _clientRepository.Insert(cl);
+            _clientRepository.Save();
+        }
     }
 }

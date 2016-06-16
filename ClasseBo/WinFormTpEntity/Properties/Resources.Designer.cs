@@ -63,6 +63,16 @@ namespace WinFormTpEntity.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Voir {
+            get {
+                object obj = ResourceManager.GetObject("Voir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Zoom_Loupe {
             get {
                 object obj = ResourceManager.GetObject("Zoom Loupe", resourceCulture);
