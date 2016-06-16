@@ -52,9 +52,6 @@
     <Compile Include="Configuration\CentreInformatiqueConfiguration.cs" />
     <Compile Include="Configuration\ClientConfiguration.cs" />
     <Compile Include="Configuration\ContratConfiguration.cs" />
-    <Compile Include="Dao\centreInformatiqueDAO.cs" />
-    <Compile Include="Dao\clientDAO.cs" />
-    <Compile Include="Dao\contratDAO.cs" />
     <Compile Include="Exceptions\DaoException.cs" />
     <Compile Include="Exceptions\DaoExceptionAfficheMessage.cs" />
     <Compile Include="Exceptions\DaoExceptionFinAppli.cs" />

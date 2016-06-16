@@ -1,5 +1,4 @@
 ﻿using ClasseBo.Exceptions;
-using ClasseDal.Dao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
