@@ -10,7 +10,6 @@ namespace ClasseDal.Manager
 {
     public class clientMngr
     {
-
         private IRepository<Client> _clientRepository;
 
         #region Constructeurs
