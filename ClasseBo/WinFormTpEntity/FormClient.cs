@@ -95,5 +95,10 @@ namespace WinFormTpEntity
         {
             gbcreer.Visible = true;
         }
+
+        private void btnann_Click(object sender, EventArgs e)
+        {
+            gbcreer.Visible = false;
+        }
     }
 }
