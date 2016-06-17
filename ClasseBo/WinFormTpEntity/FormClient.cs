@@ -65,6 +65,7 @@ namespace WinFormTpEntity
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            gbCent.Visible = false;
             if ((e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index)
                ||
                (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvmodif"].Index)
@@ -112,6 +113,7 @@ namespace WinFormTpEntity
         private void btncreer_Click(object sender, EventArgs e)
         {
             gbcreer.Visible = true;
+            gbCent.Visible = false;
         }
 
         private void btnann_Click(object sender, EventArgs e)

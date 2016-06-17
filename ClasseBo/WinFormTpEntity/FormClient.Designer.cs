@@ -65,7 +65,6 @@
             this.cplcentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.villecentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telcentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contratDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).BeginInit();
@@ -103,7 +102,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1271, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 150);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -261,7 +260,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(450, -2);
+            this.label7.Location = new System.Drawing.Point(325, -2);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(183, 46);
             this.label7.TabIndex = 17;
@@ -272,7 +271,7 @@
             this.gbCent.Controls.Add(this.dgvcent);
             this.gbCent.Location = new System.Drawing.Point(372, 230);
             this.gbCent.Name = "gbCent";
-            this.gbCent.Size = new System.Drawing.Size(933, 173);
+            this.gbCent.Size = new System.Drawing.Size(541, 173);
             this.gbCent.TabIndex = 18;
             this.gbCent.TabStop = false;
             this.gbCent.Text = "Centres";
@@ -371,13 +370,12 @@
             this.adressecentreDataGridViewTextBoxColumn,
             this.cplcentreDataGridViewTextBoxColumn,
             this.villecentreDataGridViewTextBoxColumn,
-            this.telcentreDataGridViewTextBoxColumn,
-            this.contratDataGridViewTextBoxColumn});
+            this.telcentreDataGridViewTextBoxColumn});
             this.dgvcent.DataSource = this.centreInformatiqueBindingSource;
             this.dgvcent.Location = new System.Drawing.Point(7, 27);
             this.dgvcent.Name = "dgvcent";
             this.dgvcent.ReadOnly = true;
-            this.dgvcent.Size = new System.Drawing.Size(904, 139);
+            this.dgvcent.Size = new System.Drawing.Size(528, 139);
             this.dgvcent.TabIndex = 0;
             // 
             // numcentreDataGridViewTextBoxColumn
@@ -425,20 +423,11 @@
             this.telcentreDataGridViewTextBoxColumn.ReadOnly = true;
             this.telcentreDataGridViewTextBoxColumn.Width = 83;
             // 
-            // contratDataGridViewTextBoxColumn
-            // 
-            this.contratDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.contratDataGridViewTextBoxColumn.DataPropertyName = "Contrat";
-            this.contratDataGridViewTextBoxColumn.HeaderText = "Contrat";
-            this.contratDataGridViewTextBoxColumn.Name = "contratDataGridViewTextBoxColumn";
-            this.contratDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contratDataGridViewTextBoxColumn.Width = 66;
-            // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1346, 416);
+            this.ClientSize = new System.Drawing.Size(925, 416);
             this.Controls.Add(this.gbCent);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btncreer);
@@ -499,7 +488,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cplcentreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn villecentreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telcentreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contratDataGridViewTextBoxColumn;
     }
 }
 
