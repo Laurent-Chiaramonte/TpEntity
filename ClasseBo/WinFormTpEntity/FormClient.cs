@@ -15,13 +15,19 @@ namespace WinFormTpEntity
 {
     public partial class FormClient : Form
     {
+        #region Chargement
         private clientMngr Mngr;
-
-        Client cl = new Client();
 
         public FormClient()
         {
             InitializeComponent();
+        }
+        #endregion
+
+        #region Comportement
+        private void FormClient_Load(object sender, EventArgs e)
+        {
+            this.Mngr = new clientMngr();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,18 +35,9 @@ namespace WinFormTpEntity
             DisplayAllClients();
         }
 
-        private void FormClient_Load(object sender, EventArgs e)
-        {
-            this.Mngr = new clientMngr();
-        }
-        
-        public void DisplayAllClients()
-        {
-            clientBindingSource.DataSource = Mngr.getAllCli();
-        }
-
         private void btnadd_Click(object sender, EventArgs e)
         {
+            Client cl = new Client();
             cl.nom_client = txtnom.Text;
             cl.adresse_client = txtadr.Text;
             cl.cp_client = txtcp.Text;
@@ -68,6 +65,7 @@ namespace WinFormTpEntity
         {
             if ((e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index))
             {
+                Client cl = new Client();
                 cl = (dataGridView1.Rows[e.RowIndex]).DataBoundItem as Client;
 
                 DialogResult dr = MessageBox.Show("Le client va être supprimé", "DEL",
@@ -100,5 +98,13 @@ namespace WinFormTpEntity
         {
             gbcreer.Visible = false;
         }
+        #endregion
+
+        #region Méthodes
+        public void DisplayAllClients()
+        {
+            clientBindingSource.DataSource = Mngr.getAllCli();
+        }
+        #endregion
     }
 }
