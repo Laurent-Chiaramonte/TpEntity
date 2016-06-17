@@ -13,7 +13,10 @@ namespace ClasseDal.Manager
 
         #region Constructeurs
 
-        public clientMngr() { }
+        public clientMngr()
+        {
+            this._clientRepository = new Repository<Client>();
+        }
 
         #endregion
 
@@ -21,13 +24,11 @@ namespace ClasseDal.Manager
 
         public IEnumerable<Client> getAllCli()
         {
-            this._clientRepository = new Repository<Client>();
             return _clientRepository.GetAll();
         }
 
         public Client GetClientById(int id)
         {
-            this._clientRepository = new Repository<Client>();
             return _clientRepository.GetSingleById(id);
         }
 
@@ -36,7 +37,6 @@ namespace ClasseDal.Manager
         {
             try
             {
-                this._clientRepository = new Repository<Client>();
                 _clientRepository.Insert(cl);
                 _clientRepository.Save();
                 return true;
@@ -49,14 +49,12 @@ namespace ClasseDal.Manager
 
         public void SuppClient(Client cl)
         {
-            this._clientRepository = new Repository<Client>();
             _clientRepository.Delete(cl);
             _clientRepository.Save();
         }
 
         public void UpdatClient(Client cl)
         {
-            this._clientRepository = new Repository<Client>();
             _clientRepository.Update(cl);
             _clientRepository.Save();
         }
