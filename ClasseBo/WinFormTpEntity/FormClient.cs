@@ -101,7 +101,7 @@ namespace WinFormTpEntity
                 }
                 else if (e.ColumnIndex == dataGridView1.Columns["btndgvcent"].Index)
                 {
-                    DisplayCentresByClient(cl.num_client);
+                    DisplayCentresByClient(cl);
                     gbCent.Visible = true;
                 }
 
@@ -118,6 +118,7 @@ namespace WinFormTpEntity
         {
             gbcreer.Visible = false;
         }
+
         #endregion
 
         #region Méthodes
@@ -126,12 +127,15 @@ namespace WinFormTpEntity
             clientBindingSource.DataSource = MngrCli.getAllCli();
         }
 
-        public void DisplayCentresByClient(int id)
+        public void DisplayCentresByClient(Client cl)
         {
-            IEnumerable<CentreInformatique> lstcent = MngrCent.getCentresByClient(id);
-            centreInformatiqueBindingSource.DataSource = lstcent;
+            IEnumerable<CentreInformatique> lstcent = MngrCent.getCentresByClient(cl.num_client);
+            cl.Centres = lstcent.ToList();
+            centreInformatiqueBindingSource.DataSource = cl.Centres;
         }
 
         #endregion
+
+        
     }
 }

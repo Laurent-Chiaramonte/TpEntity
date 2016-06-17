@@ -44,8 +44,6 @@ namespace ClasseDal
         public void Delete(T obj)
         {
             context.Entry(obj).State = EntityState.Deleted;
-            //T getObjById = dbSet.Find(obj);
-            //dbSet.Remove(obj);
         }
 
         public void Save()

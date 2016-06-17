@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.centreInformatiqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.centreInformatiqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.txtnom = new System.Windows.Forms.TextBox();
             this.txtadr = new System.Windows.Forms.TextBox();
@@ -50,8 +50,6 @@
             this.btncreer = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.gbCent = new System.Windows.Forms.GroupBox();
-            this.cbbcentre = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.numclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresseclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,11 +59,19 @@
             this.btndgvcent = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btndgvmodif = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btndgvsupp = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvcent = new System.Windows.Forms.DataGridView();
+            this.numcentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressecentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cplcentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.villecentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telcentreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contratDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).BeginInit();
             this.gbcreer.SuspendLayout();
             this.gbCent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcent)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,17 +103,17 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(931, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1271, 150);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // centreInformatiqueBindingSource
-            // 
-            this.centreInformatiqueBindingSource.DataSource = typeof(CentreInformatique);
             // 
             // clientBindingSource
             // 
             this.clientBindingSource.DataSource = typeof(Client);
+            // 
+            // centreInformatiqueBindingSource
+            // 
+            this.centreInformatiqueBindingSource.DataSource = typeof(CentreInformatique);
             // 
             // button1
             // 
@@ -223,7 +229,7 @@
             this.gbcreer.Controls.Add(this.txtville);
             this.gbcreer.Controls.Add(this.label3);
             this.gbcreer.Controls.Add(this.label2);
-            this.gbcreer.Location = new System.Drawing.Point(107, 203);
+            this.gbcreer.Location = new System.Drawing.Point(12, 230);
             this.gbcreer.Name = "gbcreer";
             this.gbcreer.Size = new System.Drawing.Size(340, 174);
             this.gbcreer.TabIndex = 15;
@@ -263,35 +269,14 @@
             // 
             // gbCent
             // 
-            this.gbCent.Controls.Add(this.listBox1);
-            this.gbCent.Controls.Add(this.cbbcentre);
-            this.gbCent.Location = new System.Drawing.Point(478, 203);
+            this.gbCent.Controls.Add(this.dgvcent);
+            this.gbCent.Location = new System.Drawing.Point(372, 230);
             this.gbCent.Name = "gbCent";
-            this.gbCent.Size = new System.Drawing.Size(340, 173);
+            this.gbCent.Size = new System.Drawing.Size(933, 173);
             this.gbCent.TabIndex = 18;
             this.gbCent.TabStop = false;
             this.gbCent.Text = "Centres";
             this.gbCent.Visible = false;
-            // 
-            // cbbcentre
-            // 
-            this.cbbcentre.DataSource = this.centreInformatiqueBindingSource;
-            this.cbbcentre.DisplayMember = "num_centre";
-            this.cbbcentre.FormattingEnabled = true;
-            this.cbbcentre.Location = new System.Drawing.Point(6, 26);
-            this.cbbcentre.Name = "cbbcentre";
-            this.cbbcentre.Size = new System.Drawing.Size(121, 21);
-            this.cbbcentre.TabIndex = 0;
-            this.cbbcentre.ValueMember = "num_centre";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(38, 60);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(284, 95);
-            this.listBox1.TabIndex = 1;
-            this.listBox1.Visible = false;
             // 
             // numclientDataGridViewTextBoxColumn
             // 
@@ -375,11 +360,85 @@
             this.btndgvsupp.Text = "Supprimer";
             this.btndgvsupp.UseColumnTextForButtonValue = true;
             // 
+            // dgvcent
+            // 
+            this.dgvcent.AllowUserToAddRows = false;
+            this.dgvcent.AllowUserToDeleteRows = false;
+            this.dgvcent.AutoGenerateColumns = false;
+            this.dgvcent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numcentreDataGridViewTextBoxColumn,
+            this.adressecentreDataGridViewTextBoxColumn,
+            this.cplcentreDataGridViewTextBoxColumn,
+            this.villecentreDataGridViewTextBoxColumn,
+            this.telcentreDataGridViewTextBoxColumn,
+            this.contratDataGridViewTextBoxColumn});
+            this.dgvcent.DataSource = this.centreInformatiqueBindingSource;
+            this.dgvcent.Location = new System.Drawing.Point(7, 27);
+            this.dgvcent.Name = "dgvcent";
+            this.dgvcent.ReadOnly = true;
+            this.dgvcent.Size = new System.Drawing.Size(904, 139);
+            this.dgvcent.TabIndex = 0;
+            // 
+            // numcentreDataGridViewTextBoxColumn
+            // 
+            this.numcentreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.numcentreDataGridViewTextBoxColumn.DataPropertyName = "num_centre";
+            this.numcentreDataGridViewTextBoxColumn.HeaderText = "Num";
+            this.numcentreDataGridViewTextBoxColumn.Name = "numcentreDataGridViewTextBoxColumn";
+            this.numcentreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numcentreDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // adressecentreDataGridViewTextBoxColumn
+            // 
+            this.adressecentreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.adressecentreDataGridViewTextBoxColumn.DataPropertyName = "adresse_centre";
+            this.adressecentreDataGridViewTextBoxColumn.HeaderText = "Adresse";
+            this.adressecentreDataGridViewTextBoxColumn.Name = "adressecentreDataGridViewTextBoxColumn";
+            this.adressecentreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adressecentreDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // cplcentreDataGridViewTextBoxColumn
+            // 
+            this.cplcentreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cplcentreDataGridViewTextBoxColumn.DataPropertyName = "cpl_centre";
+            this.cplcentreDataGridViewTextBoxColumn.HeaderText = "Code Postal";
+            this.cplcentreDataGridViewTextBoxColumn.Name = "cplcentreDataGridViewTextBoxColumn";
+            this.cplcentreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cplcentreDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // villecentreDataGridViewTextBoxColumn
+            // 
+            this.villecentreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.villecentreDataGridViewTextBoxColumn.DataPropertyName = "ville_centre";
+            this.villecentreDataGridViewTextBoxColumn.HeaderText = "Ville";
+            this.villecentreDataGridViewTextBoxColumn.Name = "villecentreDataGridViewTextBoxColumn";
+            this.villecentreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.villecentreDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // telcentreDataGridViewTextBoxColumn
+            // 
+            this.telcentreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.telcentreDataGridViewTextBoxColumn.DataPropertyName = "tel_centre";
+            this.telcentreDataGridViewTextBoxColumn.HeaderText = "Téléphone";
+            this.telcentreDataGridViewTextBoxColumn.Name = "telcentreDataGridViewTextBoxColumn";
+            this.telcentreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telcentreDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // contratDataGridViewTextBoxColumn
+            // 
+            this.contratDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.contratDataGridViewTextBoxColumn.DataPropertyName = "Contrat";
+            this.contratDataGridViewTextBoxColumn.HeaderText = "Contrat";
+            this.contratDataGridViewTextBoxColumn.Name = "contratDataGridViewTextBoxColumn";
+            this.contratDataGridViewTextBoxColumn.ReadOnly = true;
+            this.contratDataGridViewTextBoxColumn.Width = 66;
+            // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 381);
+            this.ClientSize = new System.Drawing.Size(1346, 416);
             this.Controls.Add(this.gbCent);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btncreer);
@@ -391,11 +450,12 @@
             this.Text = "Clients";
             this.Load += new System.EventHandler(this.FormClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).EndInit();
             this.gbcreer.ResumeLayout(false);
             this.gbcreer.PerformLayout();
             this.gbCent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,8 +484,6 @@
         private System.Windows.Forms.Button btnann;
         private System.Windows.Forms.BindingSource centreInformatiqueBindingSource;
         private System.Windows.Forms.GroupBox gbCent;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ComboBox cbbcentre;
         private System.Windows.Forms.DataGridViewTextBoxColumn numclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresseclientDataGridViewTextBoxColumn;
@@ -435,6 +493,13 @@
         private System.Windows.Forms.DataGridViewButtonColumn btndgvcent;
         private System.Windows.Forms.DataGridViewButtonColumn btndgvmodif;
         private System.Windows.Forms.DataGridViewButtonColumn btndgvsupp;
+        private System.Windows.Forms.DataGridView dgvcent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numcentreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressecentreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cplcentreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn villecentreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telcentreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contratDataGridViewTextBoxColumn;
     }
 }
 
