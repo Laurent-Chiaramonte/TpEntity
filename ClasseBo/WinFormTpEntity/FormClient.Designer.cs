@@ -31,14 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresseclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.villeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modifier = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btndgvsupp = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.centreInformatiqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.txtnom = new System.Windows.Forms.TextBox();
@@ -56,9 +49,23 @@
             this.btnann = new System.Windows.Forms.Button();
             this.btncreer = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.gbCent = new System.Windows.Forms.GroupBox();
+            this.cbbcentre = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.numclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.villeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btndgvcent = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btndgvmodif = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btndgvsupp = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.gbcreer.SuspendLayout();
+            this.gbCent.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +90,8 @@
             this.cpclientDataGridViewTextBoxColumn,
             this.villeclientDataGridViewTextBoxColumn,
             this.telclientDataGridViewTextBoxColumn,
-            this.Modifier,
+            this.btndgvcent,
+            this.btndgvmodif,
             this.btndgvsupp});
             this.dataGridView1.DataSource = this.clientBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 47);
@@ -93,75 +101,9 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // numclientDataGridViewTextBoxColumn
+            // centreInformatiqueBindingSource
             // 
-            this.numclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.numclientDataGridViewTextBoxColumn.DataPropertyName = "num_client";
-            this.numclientDataGridViewTextBoxColumn.HeaderText = "Num";
-            this.numclientDataGridViewTextBoxColumn.Name = "numclientDataGridViewTextBoxColumn";
-            this.numclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numclientDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // nomclientDataGridViewTextBoxColumn
-            // 
-            this.nomclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomclientDataGridViewTextBoxColumn.DataPropertyName = "nom_client";
-            this.nomclientDataGridViewTextBoxColumn.HeaderText = "Raison Sociale";
-            this.nomclientDataGridViewTextBoxColumn.Name = "nomclientDataGridViewTextBoxColumn";
-            this.nomclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomclientDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // adresseclientDataGridViewTextBoxColumn
-            // 
-            this.adresseclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.adresseclientDataGridViewTextBoxColumn.DataPropertyName = "adresse_client";
-            this.adresseclientDataGridViewTextBoxColumn.HeaderText = "Adresse";
-            this.adresseclientDataGridViewTextBoxColumn.Name = "adresseclientDataGridViewTextBoxColumn";
-            this.adresseclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adresseclientDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // cpclientDataGridViewTextBoxColumn
-            // 
-            this.cpclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.cpclientDataGridViewTextBoxColumn.DataPropertyName = "cp_client";
-            this.cpclientDataGridViewTextBoxColumn.HeaderText = "Code postal";
-            this.cpclientDataGridViewTextBoxColumn.Name = "cpclientDataGridViewTextBoxColumn";
-            this.cpclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cpclientDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // villeclientDataGridViewTextBoxColumn
-            // 
-            this.villeclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.villeclientDataGridViewTextBoxColumn.DataPropertyName = "ville_client";
-            this.villeclientDataGridViewTextBoxColumn.HeaderText = "Ville";
-            this.villeclientDataGridViewTextBoxColumn.Name = "villeclientDataGridViewTextBoxColumn";
-            this.villeclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.villeclientDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // telclientDataGridViewTextBoxColumn
-            // 
-            this.telclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.telclientDataGridViewTextBoxColumn.DataPropertyName = "tel_client";
-            this.telclientDataGridViewTextBoxColumn.HeaderText = "Téléphone";
-            this.telclientDataGridViewTextBoxColumn.Name = "telclientDataGridViewTextBoxColumn";
-            this.telclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telclientDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // Modifier
-            // 
-            this.Modifier.HeaderText = "";
-            this.Modifier.Name = "Modifier";
-            this.Modifier.ReadOnly = true;
-            this.Modifier.Text = "Modifier";
-            this.Modifier.UseColumnTextForButtonValue = true;
-            // 
-            // btndgvsupp
-            // 
-            this.btndgvsupp.HeaderText = "";
-            this.btndgvsupp.Name = "btndgvsupp";
-            this.btndgvsupp.ReadOnly = true;
-            this.btndgvsupp.Text = "Supprimer";
-            this.btndgvsupp.UseColumnTextForButtonValue = true;
+            this.centreInformatiqueBindingSource.DataSource = typeof(CentreInformatique);
             // 
             // clientBindingSource
             // 
@@ -319,11 +261,126 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "MaintInfo";
             // 
+            // gbCent
+            // 
+            this.gbCent.Controls.Add(this.listBox1);
+            this.gbCent.Controls.Add(this.cbbcentre);
+            this.gbCent.Location = new System.Drawing.Point(478, 203);
+            this.gbCent.Name = "gbCent";
+            this.gbCent.Size = new System.Drawing.Size(340, 173);
+            this.gbCent.TabIndex = 18;
+            this.gbCent.TabStop = false;
+            this.gbCent.Text = "Centres";
+            this.gbCent.Visible = false;
+            // 
+            // cbbcentre
+            // 
+            this.cbbcentre.DataSource = this.centreInformatiqueBindingSource;
+            this.cbbcentre.DisplayMember = "num_centre";
+            this.cbbcentre.FormattingEnabled = true;
+            this.cbbcentre.Location = new System.Drawing.Point(6, 26);
+            this.cbbcentre.Name = "cbbcentre";
+            this.cbbcentre.Size = new System.Drawing.Size(121, 21);
+            this.cbbcentre.TabIndex = 0;
+            this.cbbcentre.ValueMember = "num_centre";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(38, 60);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(284, 95);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.Visible = false;
+            // 
+            // numclientDataGridViewTextBoxColumn
+            // 
+            this.numclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.numclientDataGridViewTextBoxColumn.DataPropertyName = "num_client";
+            this.numclientDataGridViewTextBoxColumn.HeaderText = "Num";
+            this.numclientDataGridViewTextBoxColumn.Name = "numclientDataGridViewTextBoxColumn";
+            this.numclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numclientDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // nomclientDataGridViewTextBoxColumn
+            // 
+            this.nomclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomclientDataGridViewTextBoxColumn.DataPropertyName = "nom_client";
+            this.nomclientDataGridViewTextBoxColumn.HeaderText = "Raison Sociale";
+            this.nomclientDataGridViewTextBoxColumn.Name = "nomclientDataGridViewTextBoxColumn";
+            this.nomclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomclientDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // adresseclientDataGridViewTextBoxColumn
+            // 
+            this.adresseclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.adresseclientDataGridViewTextBoxColumn.DataPropertyName = "adresse_client";
+            this.adresseclientDataGridViewTextBoxColumn.HeaderText = "Adresse";
+            this.adresseclientDataGridViewTextBoxColumn.Name = "adresseclientDataGridViewTextBoxColumn";
+            this.adresseclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adresseclientDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // cpclientDataGridViewTextBoxColumn
+            // 
+            this.cpclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.cpclientDataGridViewTextBoxColumn.DataPropertyName = "cp_client";
+            this.cpclientDataGridViewTextBoxColumn.HeaderText = "Code postal";
+            this.cpclientDataGridViewTextBoxColumn.Name = "cpclientDataGridViewTextBoxColumn";
+            this.cpclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cpclientDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // villeclientDataGridViewTextBoxColumn
+            // 
+            this.villeclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.villeclientDataGridViewTextBoxColumn.DataPropertyName = "ville_client";
+            this.villeclientDataGridViewTextBoxColumn.HeaderText = "Ville";
+            this.villeclientDataGridViewTextBoxColumn.Name = "villeclientDataGridViewTextBoxColumn";
+            this.villeclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.villeclientDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // telclientDataGridViewTextBoxColumn
+            // 
+            this.telclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.telclientDataGridViewTextBoxColumn.DataPropertyName = "tel_client";
+            this.telclientDataGridViewTextBoxColumn.HeaderText = "Téléphone";
+            this.telclientDataGridViewTextBoxColumn.Name = "telclientDataGridViewTextBoxColumn";
+            this.telclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telclientDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // btndgvcent
+            // 
+            this.btndgvcent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.btndgvcent.HeaderText = "Centres";
+            this.btndgvcent.Name = "btndgvcent";
+            this.btndgvcent.ReadOnly = true;
+            this.btndgvcent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btndgvcent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btndgvcent.Text = "Afficher";
+            this.btndgvcent.UseColumnTextForButtonValue = true;
+            this.btndgvcent.Width = 68;
+            // 
+            // btndgvmodif
+            // 
+            this.btndgvmodif.HeaderText = "";
+            this.btndgvmodif.Name = "btndgvmodif";
+            this.btndgvmodif.ReadOnly = true;
+            this.btndgvmodif.Text = "Modifier";
+            this.btndgvmodif.UseColumnTextForButtonValue = true;
+            // 
+            // btndgvsupp
+            // 
+            this.btndgvsupp.HeaderText = "";
+            this.btndgvsupp.Name = "btndgvsupp";
+            this.btndgvsupp.ReadOnly = true;
+            this.btndgvsupp.Text = "Supprimer";
+            this.btndgvsupp.UseColumnTextForButtonValue = true;
+            // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 381);
+            this.Controls.Add(this.gbCent);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btncreer);
             this.Controls.Add(this.gbcreer);
@@ -334,9 +391,11 @@
             this.Text = "Clients";
             this.Load += new System.EventHandler(this.FormClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.centreInformatiqueBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.gbcreer.ResumeLayout(false);
             this.gbcreer.PerformLayout();
+            this.gbCent.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,13 +422,18 @@
         private System.Windows.Forms.Button btncreer;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnann;
+        private System.Windows.Forms.BindingSource centreInformatiqueBindingSource;
+        private System.Windows.Forms.GroupBox gbCent;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox cbbcentre;
         private System.Windows.Forms.DataGridViewTextBoxColumn numclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresseclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn villeclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telclientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Modifier;
+        private System.Windows.Forms.DataGridViewButtonColumn btndgvcent;
+        private System.Windows.Forms.DataGridViewButtonColumn btndgvmodif;
         private System.Windows.Forms.DataGridViewButtonColumn btndgvsupp;
     }
 }

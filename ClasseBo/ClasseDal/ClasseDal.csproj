@@ -55,6 +55,7 @@
     <Compile Include="Exceptions\DaoException.cs" />
     <Compile Include="Exceptions\DaoExceptionAfficheMessage.cs" />
     <Compile Include="Exceptions\DaoExceptionFinAppli.cs" />
+    <Compile Include="Manager\centreMngr.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Manager\clientMngr.cs" />
     <Compile Include="Repository\Repository.cs" />

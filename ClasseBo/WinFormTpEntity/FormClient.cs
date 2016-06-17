@@ -16,7 +16,8 @@ namespace WinFormTpEntity
     public partial class FormClient : Form
     {
         #region Chargement
-        private clientMngr Mngr;
+        private clientMngr MngrCli;
+        private centreMngr MngrCent;
 
         public FormClient()
         {
@@ -27,7 +28,7 @@ namespace WinFormTpEntity
         #region Comportement
         private void FormClient_Load(object sender, EventArgs e)
         {
-            this.Mngr = new clientMngr();
+            this.MngrCli = new clientMngr();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace WinFormTpEntity
 
             try
             {
-                if (Mngr.AjoutClient(cl))
+                if (MngrCli.AjoutClient(cl))
                 {
                     MessageBox.Show("Ajout ok !", cl.ToString());
                     gbcreer.Visible = false;
@@ -63,29 +64,47 @@ namespace WinFormTpEntity
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ((e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index))
+            if ((e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index)
+               ||
+               (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvmodif"].Index)
+               ||
+               (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["btndgvcent"].Index))
             {
                 Client cl = new Client();
                 cl = (dataGridView1.Rows[e.RowIndex]).DataBoundItem as Client;
 
-                DialogResult dr = MessageBox.Show("Le client va être supprimé", "DEL",
+                if (e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index)
+                {
+                    DialogResult dr = MessageBox.Show("Le client va être supprimé", "DEL",
                    MessageBoxButtons.YesNo,
                    MessageBoxIcon.Question,
                    MessageBoxDefaultButton.Button1);
 
-                if (dr == DialogResult.Yes)
-                {
-                    try
+                    if (dr == DialogResult.Yes)
                     {
-                        Mngr.SuppClient(cl);
-                        DisplayAllClients();
-                    }
-                    catch (DaoExceptionFinAppli defa)
-                    {
-                        MessageBox.Show(defa.Message);
-                        Application.Exit();
+                        try
+                        {
+                            MngrCli.SuppClient(cl);
+                            DisplayAllClients();
+                        }
+                        catch (DaoExceptionFinAppli defa)
+                        {
+                            MessageBox.Show(defa.Message);
+                            Application.Exit();
+                        }
                     }
                 }
+                else if (e.ColumnIndex == dataGridView1.Columns["btndgvmodif"].Index)
+                {
+
+                }
+                else if (e.ColumnIndex == dataGridView1.Columns["btndgvcent"].Index)
+                {
+                    DisplayCentresByClient(cl.num_client);
+                    gbCent.Visible = true;
+                }
+
+
             }
         }
 
@@ -103,8 +122,15 @@ namespace WinFormTpEntity
         #region Méthodes
         public void DisplayAllClients()
         {
-            clientBindingSource.DataSource = Mngr.getAllCli();
+            clientBindingSource.DataSource = MngrCli.getAllCli();
         }
+
+        public void DisplayCentresByClient(int id)
+        {
+            IEnumerable<CentreInformatique> lstcent = MngrCent.getCentresByClient(id);
+            centreInformatiqueBindingSource.DataSource = lstcent;
+        }
+
         #endregion
     }
 }
