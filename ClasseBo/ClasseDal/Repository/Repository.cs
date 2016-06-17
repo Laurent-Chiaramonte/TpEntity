@@ -21,7 +21,7 @@ namespace ClasseDal
             dbSet = context.Set<T>();
         }
 
-        public IEnumerable<T> GetAll()
+        public ICollection<T> GetAll()
         {
             return dbSet.ToList();
         }

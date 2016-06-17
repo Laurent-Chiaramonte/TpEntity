@@ -22,7 +22,7 @@ namespace ClasseDal.Manager
 
         #region Méthodes
 
-        public IEnumerable<Client> getAllCli()
+        public ICollection<Client> getAllCli()
         {
             return _clientRepository.GetAll();
         }

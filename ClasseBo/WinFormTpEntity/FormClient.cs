@@ -18,6 +18,7 @@ namespace WinFormTpEntity
         #region Chargement
         private clientMngr MngrCli;
         private centreMngr MngrCent;
+        private contratMngr MngrCon;
 
         public FormClient()
         {
@@ -30,6 +31,7 @@ namespace WinFormTpEntity
         {
             this.MngrCli = new clientMngr();
             this.MngrCent = new centreMngr();
+            this.MngrCon = new contratMngr();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -127,6 +129,7 @@ namespace WinFormTpEntity
         public void DisplayAllClients()
         {
             clientBindingSource.DataSource = MngrCli.getAllCli();
+            centreInformatiqueBindingSource.DataSource = MngrCent.getAllCent();
         }
 
         public void DisplayCentresByClient(Client cl)
@@ -134,6 +137,7 @@ namespace WinFormTpEntity
             IEnumerable<CentreInformatique> lstcent = MngrCent.getCentresByClient(cl.num_client);
             cl.Centres = lstcent.ToList();
             centreInformatiqueBindingSource.DataSource = cl.Centres;
+            contratBindingSource.DataSource = MngrCon.getAllCon();
         }
 
         #endregion

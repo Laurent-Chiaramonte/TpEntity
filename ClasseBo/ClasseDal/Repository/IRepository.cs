@@ -8,7 +8,7 @@ namespace ClasseDal
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        IEnumerable<TEntity> GetAll();
+        ICollection<TEntity> GetAll();
         TEntity GetSingleById(int Id);
         void Insert(TEntity obj);
         void Update(TEntity obj);

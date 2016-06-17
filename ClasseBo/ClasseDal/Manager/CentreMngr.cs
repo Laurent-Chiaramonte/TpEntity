@@ -56,9 +56,9 @@ namespace ClasseDal.Manager
             _centreRepository.Save();
         }
 
-        public IEnumerable<CentreInformatique> getCentresByClient(int id)
+        public ICollection<CentreInformatique> getCentresByClient(int id)
         {
-            IEnumerable<CentreInformatique> cebyid = _centreRepository.GetAll();
+            ICollection<CentreInformatique> cebyid = _centreRepository.GetAll();
             var lst = cebyid.Where(p => p.NumCli == id).ToList();
             return lst;
         }
