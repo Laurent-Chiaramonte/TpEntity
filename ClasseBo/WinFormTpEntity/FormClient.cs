@@ -29,6 +29,7 @@ namespace WinFormTpEntity
         private void FormClient_Load(object sender, EventArgs e)
         {
             this.MngrCli = new clientMngr();
+            this.MngrCent = new centreMngr();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace WinFormTpEntity
 
                 if (e.ColumnIndex == dataGridView1.Columns["btndgvsupp"].Index)
                 {
-                    DialogResult dr = MessageBox.Show("Le client va être supprimé", "DEL",
+                   DialogResult dr = MessageBox.Show("Le client va être supprimé", "DEL",
                    MessageBoxButtons.YesNo,
                    MessageBoxIcon.Question,
                    MessageBoxDefaultButton.Button1);

@@ -17,3 +17,4 @@ C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\
 C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.dll
 C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.pdb
 E:\NewGitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.csprojResolveAssemblyReference.cache
+C:\Users\HP-Lolo\Documents\Visual Studio 2015\Projects\GitHub\TpEntity\ClasseBo\ClasseBo\obj\Debug\ClasseBo.csprojResolveAssemblyReference.cache
